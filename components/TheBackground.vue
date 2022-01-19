@@ -2,10 +2,14 @@
   <div>
     <img :id="'map'" src="~/assets/images/background.png" alt="">
     <div id="info_blend_in">
-      <img :id="'info_img'" :src="imagesrc" alt="">
+      <img :id="'info_img'" :src="imagesrc" alt="" :class="'fade'">
       <div>
-        <h2> {{ heading }} </h2>
-        <p> {{ text }} </p>
+        <h2 :class="'fade'">
+          {{ heading }}
+        </h2>
+        <p :class="'fade'">
+          {{ text }}
+        </p>
       </div>
     </div>
   </div>
@@ -26,6 +30,30 @@ export default {
     text: {
       type: String,
       default: null
+    },
+    change: {
+      type: Boolean,
+      default: false
+    }
+  },
+  watch: {
+    change: {
+      handler () {
+        const FADECOLLECTION = document.getElementsByClassName('fade')
+        if (this.change === true) {
+          for (let i = 0; i < FADECOLLECTION.length; i++) {
+            console.log('fade out')
+            console.log(this.heading)
+            FADECOLLECTION[i].style.transitionDuration = 1 + 's'
+            FADECOLLECTION[i].style.opacity = 0
+          }
+        } else {
+          for (let i = 0; i < FADECOLLECTION.length; i++) {
+            FADECOLLECTION[i].style.transitionDuration = 1 + 's'
+            FADECOLLECTION[i].style.opacity = 1
+          }
+        }
+      }
     }
   }
 }

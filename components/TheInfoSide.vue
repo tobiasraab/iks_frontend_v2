@@ -49,10 +49,6 @@
 export default {
   name: 'TheInfoSide',
   props: {
-    data: {
-      type: Object,
-      default: null
-    },
     steps: {
       type: Array,
       default: null
@@ -84,7 +80,6 @@ export default {
           let marginInfo = 100
 
           for (let k = i; k >= 0; k--) {
-            console.log(k)
             // add margin
             marginYear = marginYear - this.steps[k].margin - 30
             marginInfo = marginInfo - 100

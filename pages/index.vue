@@ -5,9 +5,9 @@
       :heading="background.heading"
       :text="background.text"
       :imagesrc="background.imageSrc"
+      :change="fadeChange"
     />
     <TheInfoSide
-      :data="infoSide"
       :steps="steps"
     />
   </div>
@@ -30,23 +30,10 @@ export default {
         text: null,
         imageSrc: null
       },
+      fadeChange: false,
       socket: undefined,
       allPassive: undefined,
       focusState: undefined,
-      infoSide: {
-        heading1: 'Test Überschrift1',
-        text1: 'Test Text 1',
-
-        heading2: 'Test Überschrift2',
-        text2: 'Test Text 3',
-        topic: 'Anleitung',
-        builder: 'Sei der Baumeister des Ulmer Münsters! \n\n So funktioniert´s: ...',
-        time: null,
-        info: null,
-        imgtitle: null,
-        imgsrc: null,
-        titleBuilder: 'Info'
-      },
       steps: [
         {
           text1: 'test text1',
@@ -205,40 +192,31 @@ export default {
         // search focused theme
         for (let i = 0; i < this.steps.length; i++) {
           if (this.steps[i].state === 'focus') {
-            // change data for the info side
-            this.infoSide = {
-              topic: this.steps[i].name,
-              time: this.steps[i].time,
-              imgtitle: this.steps[i].imgtitle,
-              imgsrc: this.steps[i].imgsrc
-            }
-            this.background = {
-              heading: this.steps[i].backgroundHeading,
-              text: this.steps[i].backgroundInfoText,
-              imageSrc: this.steps[i].backgroundInfoImg
-            }
+            this.fadeChange = true
             console.log(this.background)
+            setTimeout(() => {
+              console.log(this.background)
+              this.background = {
+                heading: this.steps[i].backgroundHeading,
+                text: this.steps[i].backgroundInfoText,
+                imageSrc: this.steps[i].backgroundInfoImg
+              }
+              this.fadeChange = false
+            }, 1000)
             this.focusState = true
           }
-          if (!this.focusState) {
-            this.infoSide = {
-              topic: null,
-              builder: null,
-              time: null,
-              info: null,
-              imgtitle: null,
-              imgsrc: null,
-              titleBuilder: null
-            }
+        }
+        if (!this.focusState) {
+          this.fadeChange = true
+          setTimeout(() => {
             this.background = {
               heading: null,
               text: null,
               imageSrc: null
             }
-          }
+            this.fadeChange = false
+          }, 1000)
         }
-
-        // default start state?
       }
     }
   },
