@@ -42,6 +42,14 @@ export default {
     // https://nuxt-socket-io.netlify.app/
     'nuxt-socket-io'
   ],
+  io: {
+    // module options
+    sockets: [{
+      name: 'main',
+      url: 'http://localhost:3001',
+      default: true
+    }]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
