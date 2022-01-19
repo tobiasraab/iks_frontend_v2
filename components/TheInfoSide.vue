@@ -164,13 +164,13 @@ export default {
     font-family: 'frutigerregular';
     font-size: 20px;
     line-height: 24px;
+    height: 350px;
   }
   h2 {
     color: white;
     font-family: 'frutigerregular';
     font-size: 20px;
     line-height: 24px;
-    margin-top: 64px;
     margin-bottom: 6px;
     position: relative;
   }
@@ -180,6 +180,7 @@ export default {
     font-size: 23px;
     line-height: 28px;
     position: relative;
+    white-space: pre-line;
   }
   h3 {
     position: relative;
