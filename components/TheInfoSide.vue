@@ -90,7 +90,6 @@ export default {
         }
       }
       if (!focus) {
-        console.warn('else')
         const MARGININFO = -1200
         document.getElementById('info_scale').style.top = 'calc(' + MARGININFO + '% + 337px)'
       }

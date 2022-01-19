@@ -186,16 +186,12 @@ export default {
     steps: {
       deep: true,
       handler () {
-        console.warn('change')
-        // update lists
         this.focusState = false
         // search focused theme
         for (let i = 0; i < this.steps.length; i++) {
           if (this.steps[i].state === 'focus') {
             this.fadeChange = true
-            console.log(this.background)
             setTimeout(() => {
-              console.log(this.background)
               this.background = {
                 heading: this.steps[i].backgroundHeading,
                 text: this.steps[i].backgroundInfoText,
