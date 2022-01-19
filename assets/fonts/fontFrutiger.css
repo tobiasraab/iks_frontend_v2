@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'frutigermedium';
+    src: url('FrutigerNeueLTW1G-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'frutigerregular';
+    src: url('FrutigerNeueLTW1G-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'frutigerbook';
+    src: url('FrutigerNeueLTW1G-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'frutigerbold';
+    src: url('FrutigerNeueLTW1G-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
