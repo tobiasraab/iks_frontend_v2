@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'iks_frontend_v2',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
@@ -38,7 +38,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // https://nuxt-socket-io.netlify.app/
+    'nuxt-socket-io'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
