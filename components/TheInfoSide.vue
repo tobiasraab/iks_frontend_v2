@@ -163,14 +163,16 @@ export default {
     font-family: 'frutigerregular';
     font-size: 20px;
     line-height: 24px;
-    height: 350px;
+    height: 380px;
+    width: 90%;
+    letter-spacing: 1px;
   }
   h2 {
     color: white;
     font-family: 'frutigerregular';
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 6px;
+    margin-bottom: -20px;
     position: relative;
   }
   .info-text2{
