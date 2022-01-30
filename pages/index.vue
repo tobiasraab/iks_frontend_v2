@@ -217,6 +217,52 @@ export default {
     }
   },
   mounted () {
+    let stepNumber = 12
+    window.addEventListener('keydown', (e) => {
+      console.log(e)
+      if (e.key === 'ArrowRight') {
+        stepNumber--
+      } else if (e.key === 'ArrowLeft') {
+        stepNumber++
+      }
+
+      if (stepNumber === 12) {
+        for (let i = 0; i < 12; i++) {
+          this.steps[i].state = 'passive'
+        }
+      } else {
+        this.steps[stepNumber].state = 'focus'
+        for (let i = stepNumber + 1; i < 12; i++) {
+          this.steps[i].state = 'active'
+        }
+        for (let i = stepNumber - 1; i >= 0; i--) {
+          this.steps[i].state = 'passive'
+        }
+      }
+      /* if (e.key === 'ArrowRight') {
+        if (stepNumber > 0) {
+          stepNumber--
+          this.steps[stepNumber].state = 'focus'
+          for (let i = stepNumber; i < stepNumber; i++) {
+            this.steps[i].state = 'active'
+          }
+          for (let i = stepNumber + 1; i < 13; i++) {
+            this.steps[i].state = 'passive'
+          }
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (stepNumber >= 0) {
+          stepNumber--
+          this.steps[stepNumber].state = 'focus'
+          for (let i = 0; i < stepNumber; i++) {
+            this.steps[i].state = 'focus'
+          }
+          for (let i = stepNumber + 1; i < 13; i++) {
+            this.steps[i].state = 'passive'
+          }
+        }
+      } */
+    })
     // Connect Socket
     this.socket = this.$nuxtSocket({
     })
