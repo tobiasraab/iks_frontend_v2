@@ -42,8 +42,6 @@ export default {
         const FADECOLLECTION = document.getElementsByClassName('fade')
         if (this.change === true) {
           for (let i = 0; i < FADECOLLECTION.length; i++) {
-            console.log('fade out')
-            console.log(this.heading)
             FADECOLLECTION[i].style.transitionDuration = 1 + 's'
             FADECOLLECTION[i].style.opacity = 0
           }
@@ -84,14 +82,14 @@ export default {
   h2 {
     font-family: 'frutigerregular';
     opacity: 1;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     margin-left: 20px;
   }
 
   p{
     font-family: 'frutigerlight';
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     margin-top: 12px;
     margin-left: 20px;

@@ -168,7 +168,7 @@ export default {
           margin: 76
         },
         {
-          text1: '30.6.1377 wurde der Grundstein für die neue Kirche gelegt. Die Ulmer wollten eine Kirche, die dem Ansehen der politisch mächtigen und wirtschaftlich wohlhabenden Reichsstadt angemessen war. Dazu waren die Bürger bereit sich fina-ziell zu beteiligen. Es sollte eine Bürgerkirche werden, also ohne die Unterstützung eines Bischofs oder Fürsten zu finanziert werden.',
+          text1: '30.6.1377 wurde der Grundstein für die neue Kirche gelegt. Die Ulmer wollten eine Kirche, die dem Ansehen der politisch mächtigen und wirtschaftlich wohlhabenden Reichsstadt angemessen war. Dazu waren die Bürger bereit sich finanziell zu beteiligen. Es sollte eine Bürgerkirche werden, also ohne die Unterstützung eines Bischofs oder Fürsten zu finanziert werden.',
           heading2: 'Baumeister',
           text2: 'Heinrich ll. Parler (1377-1383)',
           name: 'Grundsteinlegung',
