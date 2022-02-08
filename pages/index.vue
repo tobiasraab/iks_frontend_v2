@@ -166,7 +166,7 @@ export default {
           backgroundInfoText: 'Das Baumeisterbild am Chorgesims im Winkel zwischen Chor und Südturm im Ulmer Münster zeigt vermutlich Michael Parler. Bis 1387 leitete er den Münsterbau. Unter seiner Regie wurde u.a. mit dem Langhaus begonnen und „der Chor mit dem ersten Kranzgesims abgeschlossen“ und provisorisch abgedeckt. Damit war die Möglichkeit geschaffen, einen Altar aufzustellen und Gottesdienste zu feiern.',
           backgroundInfoImg: require('~/assets/images/markus-parler.png'),
           margin: 76
-        },
+        }/* ,
         {
           text1: '30.6.1377 wurde der Grundstein für die neue Kirche gelegt. Die Ulmer wollten eine Kirche, die dem Ansehen der politisch mächtigen und wirtschaftlich wohlhabenden Reichsstadt angemessen war. Dazu waren die Bürger bereit sich finanziell zu beteiligen. Es sollte eine Bürgerkirche werden, also ohne die Unterstützung eines Bischofs oder Fürsten zu finanziert werden.',
           heading2: 'Baumeister',
@@ -178,7 +178,7 @@ export default {
           backgroundInfoText: 'Die Gedenktafel zeigt Altbürgermeister Lutz Kraft und seine Frau Elisabeth Ehinger. Beide legen einer Person, bei der es sich um den ersten Münsterbaumeister Heinrich II. Parler handeln dürfte, mit dem Modell einer Hallenkirche symbolisch die ganze Baulast auf die Schultern. Darüber eine Inschrift mit Jahrestag und Stunde der Grundsteinlegung.',
           backgroundInfoImg: require('~/assets/images/Ulm-Muenster-Gruendungsrelief.jpg'),
           margin: 0
-        }
+        } */
       ]
     }
   },
@@ -217,7 +217,7 @@ export default {
     }
   },
   mounted () {
-    let stepNumber = 12
+    let stepNumber = this.steps.length
     window.addEventListener('keydown', (e) => {
       console.log(e)
       if (e.key === 'ArrowRight') {
@@ -226,13 +226,13 @@ export default {
         stepNumber++
       }
 
-      if (stepNumber === 12) {
-        for (let i = 0; i < 12; i++) {
+      if (stepNumber === this.steps.length) {
+        for (let i = 0; i < this.steps.length; i++) {
           this.steps[i].state = 'passive'
         }
       } else {
         this.steps[stepNumber].state = 'focus'
-        for (let i = stepNumber + 1; i < 12; i++) {
+        for (let i = stepNumber + 1; i < this.steps.length; i++) {
           this.steps[i].state = 'active'
         }
         for (let i = stepNumber - 1; i >= 0; i--) {
