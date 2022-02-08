@@ -35,7 +35,7 @@
         <div>
           <h1> Vorgeschichte </h1>
           <p :class="'info-text1'">
-            Die Bürger der Stadt Ulm beschlossen gemeinsam ihre alte Pfarrkirche abzureisen und eine neue zentral in der Stadtmitte zu bauen. Ein Grund der Verlegung war die ungeschützte Lage vor den Mauern. Viele Gläubige blieben fern und spendeten an andere Gemeinden. Den Ulmern war es wichtig eine Kirche zu errichten ohne die Unterstützung eines Bischofs oder Fürsten. Eine Bürgerkirche soll es werden.
+            Die Bürger der Stadt Ulm beschlos-<br>sen gemeinsam ihre alte Pfarrkirche abzureisen und eine neue zentral<br>in der Stadtmitte zu bauen. Ein Grund der Verlegung war die ungeschützte Lage vor den Mauern. Viele Gläubige blieben fern und spendeten an andere Gemeinden. Den Ulmern war es wichtig eine Kirche zu errichten ohne die Unterstützung eines Bischofs oder Fürsten. Eine Bürgerkirche soll<br>es werden.
           </p>
           <h2 />
           <p :class="'info-text2'" />
@@ -164,9 +164,11 @@ export default {
     font-family: 'frutigerregular';
     font-size: 20px;
     line-height: 24px;
-    height: 380px;
+    height: 420px;
     width: 90%;
     letter-spacing: 1px;
+    white-space: pre-line;
+    margin-top: -48px;
   }
   h2 {
     color: white;

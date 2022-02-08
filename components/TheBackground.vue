@@ -91,8 +91,9 @@ export default {
     font-family: 'frutigerlight';
     font-size: 16px;
     color: white;
-    margin-top: 12px;
+    margin-top: -12px;
     margin-left: 20px;
+    white-space: pre-line;
   }
 
   #info_img{
